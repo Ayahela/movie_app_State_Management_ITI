@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/features/data/actor_model.dart';
 import '../cubit/movie_cubit.dart';
 import '../cubit/movie_state.dart';
-import '../data/movie_api.dart';
 import '../data/movie_model.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -16,13 +15,13 @@ class DetailsScreen extends StatefulWidget {
 
 class _DetailsScreenState extends State<DetailsScreen> {
   @override
-  @override
   void initState() {
     // TODO: implement initState
     super.initState();
     context.read<MovieCubit>().getActors(widget.movie.id);
 
   }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
